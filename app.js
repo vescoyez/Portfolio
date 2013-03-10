@@ -30,8 +30,10 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-var smtpTransport = nodemailer.createTransport("SMTP",{
-    service: "Gmail",
+var transport = nodemailer.createTransport("SMTP", {
+    host: "smtp.gmail.com", // hostname
+    secureConnection: true, // use SSL
+    port: 465, // port for secure SMTP
     auth: {
         user: process.env.GMAIL_USERNAME,
         pass: process.env.GMAIL_PASSWORD
@@ -73,7 +75,7 @@ app.post('/contact', function(req, res){
 		    subject: "Contact Form from " + senderName + " " + senderEmail, // Subject line
 		    text: senderMessage // plaintext body
 		}
-		smtpTransport.sendMail(mailOptions, function(error, response){
+		transport.sendMail(mailOptions, function(error, response){
 		    if(error){
 		        console.log(error);
 		    }else{
