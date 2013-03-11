@@ -84,7 +84,7 @@ $(document).ready(function() {
 			$('body').addClass('case-open').addClass(caseOpened);
 			setTimeout(function() {
 				thisCase.addClass('active-case')
-			}, 400) //Time to enlarge the container
+			}, 600) //Time to enlarge the container
 			
 		}
 	}

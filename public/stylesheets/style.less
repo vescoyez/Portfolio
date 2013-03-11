@@ -199,11 +199,6 @@ a {
 	text-align: center;
 	box-shadow: 0 0px 3px black, inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 	cursor: pointer;
-	-webkit-transition: all .2s ease-in-out;
-	-moz-transition: all .2s ease-in-out;
-	-ms-transition: all .2s ease-in-out;
-	-o-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out;
 }
 
 .button.well {
@@ -394,6 +389,7 @@ header {
 header h1 {
 	margin: 0;
 	float: left;
+	-webkit-backface-visibility: hidden;
 }
 
 header h1 a {
@@ -442,6 +438,7 @@ header h1 a.logo-svg {
 	display: block;
 	float: left;
 	margin-left: 30px;
+	-webkit-backface-visibility: hidden;
 }
 
 .menu ul li a {
@@ -456,11 +453,11 @@ header h1 a.logo-svg {
 
 .menu ul li a.text-color:hover {
 	color: #BBB;
-	-webkit-transition: all .2s ease-in-out;
-	-moz-transition: all .2s ease-in-out;
-	-ms-transition: all .2s ease-in-out;
-	-o-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out;
+	-webkit-transition: color .2s ease-in-out;
+	-moz-transition: color .2s ease-in-out;
+	-ms-transition: color .2s ease-in-out;
+	-o-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
 }
 
 .share {
@@ -471,11 +468,11 @@ header h1 a.logo-svg {
 	background: url(/images/share.png) no-repeat right center rgba(0,0,0,0.4);
 	margin: 0;
 	padding: 10px 35px 10px 10px;
-	-webkit-transition: all .2s ease-in-out;
-	-moz-transition: all .2s ease-in-out;
-	-ms-transition: all .2s ease-in-out;
-	-o-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out;
+	-webkit-transition: left .2s ease-in-out;
+	-moz-transition: left .2s ease-in-out;
+	-ms-transition: left .2s ease-in-out;
+	-o-transition: left .2s ease-in-out;
+	transition: left .2s ease-in-out;
 	z-index: 100;
 }
 
@@ -503,11 +500,11 @@ header h1 a.logo-svg {
 	width: 40px;
 	height: 40px;
 	opacity: 0.8;
-	-webkit-transition: all .2s ease-in-out;
-	-moz-transition: all .2s ease-in-out;
-	-ms-transition: all .2s ease-in-out;
-	-o-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out;
+	-webkit-transition: opacity .2s ease-in-out;
+	-moz-transition: opacity .2s ease-in-out;
+	-ms-transition: opacity .2s ease-in-out;
+	-o-transition: opacity .2s ease-in-out;
+	transition: opacity .2s ease-in-out;
 }
 
 .share li a:hover {
@@ -606,6 +603,7 @@ article .case-slider h1 {
 
 .page-wrapper {
 	margin: 0 10px;
+	-webkit-backface-visibility: hidden;
 }
 
 .page-down {
@@ -683,11 +681,11 @@ article .case-slider h1 {
 	border: none;
 	background: rgba(0,0,0,0.3);
 	padding: 5px;
-	-webkit-transition: all .2s ease-in-out;
-	-moz-transition: all .2s ease-in-out;
-	-ms-transition: all .2s ease-in-out;
-	-o-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out;
+	-webkit-transition: background .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out;
+	-ms-transition: background .2s ease-in-out;
+	-o-transition: background .2s ease-in-out;
+	transition: background .2s ease-in-out;
 }
 
 .contact-form:focus {
@@ -741,11 +739,13 @@ article .case-slider h1 {
 	position: relative;
 	height: 50%;
 	cursor: pointer;
+	-webkit-backface-visibility: hidden;
 }
 
 .thumb img {
 	width: 100%;
 	height: 100%;
+	-webkit-backface-visibility: hidden;
 }
 
 .svg .thumb img {
@@ -779,6 +779,7 @@ article .case-slider h1 {
 	transition: all .4s ease-in-out;
 	left: 50%;
 	margin-left: -480px;
+	-webkit-backface-visibility: hidden;
 }
 
 .case-open .work-container {
@@ -842,6 +843,7 @@ article .case-slider h1 {
 .case-content {
 	height: 100%;
 	overflow: hidden;
+	-webkit-backface-visibility: hidden;
 }
 
 .block-wrapper {
@@ -853,6 +855,7 @@ article .case-slider h1 {
 	-ms-transition: all .4s ease-in-out;
 	-o-transition: all .4s ease-in-out;
 	transition: all .4s ease-in-out;
+	-webkit-backface-visibility: hidden;
 }
 
 .block-wrapper:hover {
@@ -887,13 +890,11 @@ article .case-slider h1 {
 	height: 50%;
 	background: #DDD;
 	display: none;
-	opacity: 0;
-	-webkit-transition: all 1s ease-in;
+	-webkit-backface-visibility: hidden;
 }
 
 .active-case .case-study {
 	display: block;
-	opacity: 1;
 }
 
 /* ---------- Slider ---------- */
@@ -944,7 +945,11 @@ article .case-slider h1 {
 	margin-top: -20px;
 	border-radius: 0 3px 3px 0;
 	box-shadow: 0px 0px 3px black;
-	-webkit-transition: all .4s ease-in-out;
+	-webkit-transition: left .4s ease-in-out;
+	-moz-transition: left .4s ease-in-out;
+	-ms-transition: left .4s ease-in-out;
+	-o-transition: left .4s ease-in-out;
+	transition: left .4s ease-in-out;
 }
 
 .active-case .case-direction-nav a.case-prev {
@@ -960,6 +965,11 @@ article .case-slider h1 {
 	left: auto;
 	border-radius: 3px 0 0 3px;
 	background: url(/images/slider-next.png);
+	-webkit-transition: right .4s ease-in-out;
+	-moz-transition: right .4s ease-in-out;
+	-ms-transition: right .4s ease-in-out;
+	-o-transition: right .4s ease-in-out;
+	transition: right .4s ease-in-out;
 }
 
 .active-case .case-direction-nav a.case-next {
