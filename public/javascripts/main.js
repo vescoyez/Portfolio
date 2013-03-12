@@ -69,39 +69,17 @@ $(document).ready(function() {
 		thisCase = $(this).closest('.case-block');
 		numCase = +thisCase.data('case');
 		caseOpened = 'case-' + numCase + '-open';
+		$('.case-study').removeClass('active-case');
+		$('body').removeClass(caseClass).addClass('case-open').addClass(caseOpened);
+		thisCase.find('.case-study').addClass('active-case');
 		
-		if($('body').hasClass('case-open')) {
-		
-			$('.case-block').filter('.active-case').addClass('closing-case');
-			setTimeout(function() {
-				$('.case-block').removeClass('active-case closing-case');
-				$('body').removeClass(caseClass).addClass(caseOpened);
-				thisCase.addClass('active-case');
-			}, 400) //Time to close the active case
-			
-		} else {
-			
-			$('body').addClass('case-open').addClass(caseOpened);
-			setTimeout(function() {
-				thisCase.addClass('active-case')
-			}, 600) //Time to enlarge the container
-			
-		}
 	}
 	
 	function closeCases(event){
 		event.preventDefault();
+		$('.case-study').removeClass('active-case');
 		thisLink = $(this);
-		
-		if($('body').hasClass('case-open')) {
-			$('.case-block').filter('.active-case').addClass('closing-case');
-			setTimeout(function() {
-				$('.case-block').removeClass('active-case closing-case');
-				setTimeout(changePage(), 50);
-			}, 400) //Time to close the active case
-		} else {
-			changePage();
-		}
+		changePage();
 	}
 	
 	function changePage() {
