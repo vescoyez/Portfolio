@@ -59,7 +59,7 @@ app.post('/contact', function(req, res){
 	};
 	if (req.body.user.email === '') {
 		msgErr += 'Email is required ! ';
-	} else if(/^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/.test(req.body.user.email) === false) {
+	} else if(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-z]{2,6}$/.test(req.body.user.email) === false) {
 		msgErr += 'Please, enter a valid email ! ';
 	};
 	if(req.body.user.message === ''){
