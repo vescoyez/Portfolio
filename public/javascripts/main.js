@@ -25,11 +25,11 @@ $(document).ready(function() {
 			if(slider.currentSlide < slider.animatingTo){
 				$('.case-slide').removeClass('prev next');
 				slide = '.slide-' + slider.animatingTo;
-				$(slide).addClass('next').delay(8000);
+				$(slide).addClass('next');
 			} else {
 				$('.case-slide').removeClass('prev next');
 				slide = '.slide-' + slider.animatingTo;
-				$(slide).addClass('prev').delay(8000);
+				$(slide).addClass('prev');
 			}
 		},
 		after: function(){},
@@ -69,22 +69,43 @@ $(document).ready(function() {
 		thisCase = $(this).closest('.case-block');
 		numCase = +thisCase.data('case');
 		caseOpened = 'case-' + numCase + '-open';
+		scrollTo = '#case-' + (numCase - 1);
 		
-		if($('body').hasClass('case-open')) {
+		if ($(".mobile-only").is(":visible")) {
 		
-			$('.case-block').filter('.active-case').addClass('closing-case');
-			setTimeout(function() {
-				$('.case-block').removeClass('active-case closing-case');
-				$('body').removeClass(caseClass).addClass(caseOpened);
-				thisCase.addClass('active-case');
-			}, 400) //Time to close the active case
-			
+			$('.case-block').removeClass('active-case');
+			$('body').removeClass(caseClass).addClass('case-open').addClass(caseOpened);
+			thisCase.addClass('active-case');
+			if (numCase != 0){
+			$('html, body').animate({
+					scrollTop: $(scrollTo).offset().top + 100
+				}, 650);
+			} else {
+				$('html, body').animate({
+					scrollTop: 0
+				}, 650);
+			}
+
+		
 		} else {
-			
-			$('body').addClass('case-open').addClass(caseOpened);
-			setTimeout(function() {
-				thisCase.addClass('active-case')
-			}, 600) //Time to enlarge the container
+		
+			if($('body').hasClass('case-open')) {
+				$('.case-slide').removeClass('prev next');
+				$('.case-block').filter('.active-case').addClass('closing-case');
+				setTimeout(function() {
+					$('.case-block').removeClass('active-case closing-case');
+					$('body').removeClass(caseClass).addClass(caseOpened);
+					thisCase.addClass('active-case');
+				}, 400) //Time to close the active case
+				
+			} else {
+				$('.case-slide').removeClass('prev next');
+				$('body').addClass('case-open').addClass(caseOpened);
+				setTimeout(function() {
+					thisCase.addClass('active-case')
+				}, 600) //Time to enlarge the container
+				
+			}
 			
 		}
 	}
