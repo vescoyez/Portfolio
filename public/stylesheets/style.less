@@ -261,15 +261,15 @@ a {
 }
 
 .svg.inlinesvg.csstransitions .case-2-open .button {
-	background-color: #28551C;
+	background-color: #517E27;
 }
 
 .svg.inlinesvg.csstransitions .case-3-open .button {
-	background-color: #4F859D;
+	background-color: #F94B0B;
 }
 
 .svg.inlinesvg.csstransitions .case-4-open .button {
-	background-color: #F9F442;
+	background-color: #5EB5D8;
 }
 
 .svg.inlinesvg.csstransitions .case-5-open .button {
@@ -285,15 +285,15 @@ a {
 }
 
 .svg.inlinesvg.csstransitions .case-2-open {
-	background-color: #28551C;
+	background-color: #517E27;
 }
 
 .svg.inlinesvg.csstransitions .case-3-open {
-	background-color: #4F859D;
+	background-color: #F94B0B;
 }
 
 .svg.inlinesvg.csstransitions .case-4-open {
-	background-color: #F9F442;
+	background-color: #5EB5D8;
 }
 
 .svg.inlinesvg.csstransitions .case-5-open {
@@ -321,15 +321,15 @@ a {
 }
 
 .svg.inlinesvg.csstransitions .case-2-open .text-color {
-	color: #28551C;
+	color: #517E27;
 }
 
 .svg.inlinesvg.csstransitions .case-3-open .text-color {
-	color: #4F859D;
+	color: #F94B0B;
 }
 
 .svg.inlinesvg.csstransitions .case-4-open .text-color {
-	color: #F9F442;
+	color: #5EB5D8;
 }
 
 .svg.inlinesvg.csstransitions .case-5-open .text-color {
@@ -414,6 +414,7 @@ a {
 
 img {
 	max-width: 100%;
+	max-height: 100%;
 }
 
 .js-only {
@@ -961,13 +962,8 @@ article .case-slider h1 {
 	width: 100%;
 	height: 50%;
 	background: #DDD;
-	display: none;
 	position: relative;
 	-webkit-backface-visibility: hidden;
-}
-
-.active-case .case-study {
-	display: block;
 }
 
 .button.button-case-site {
@@ -1768,6 +1764,52 @@ article .case-slider h1 {
 		width: 100%;
 	}
 	
+}
+
+/*-------------------------------------------------
+	No JS or No CSS Transistions
+-------------------------------------------------*/
+
+.no-js .home .work-page, .no-js .home .contact-page {
+	display: none;
+}
+
+.no-js .work .intro-page, .no-js .work .contact-page {
+	display: none;
+}
+
+.no-js .contact .intro-page, .no-js .contact .work-page {
+	display: none;
+}
+
+.no-js .content, .no-csstransitions .content {
+	position: static;
+	clear: both;
+}
+
+.no-js .work-container, .no-csstransitions .work-container {
+	width: 100%;
+	height: auto;
+	margin-left: 0;
+	left: 0;
+}
+
+.no-js .case-block, .no-csstransitions .case-block {
+	clear: both;
+	width: 100%;
+	height: auto;
+}
+
+.no-js .thumb, .no-csstransitions .thumb {
+	display: none;
+}
+
+.no-js .case-slide {
+	display: none;
+}
+
+.no-js .case-slide.slide-0 {
+	display: block;
 }
 
 /* ==========================================================================
