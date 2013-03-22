@@ -129,7 +129,7 @@ $(document).ready(function() {
 	}
 	
 	function closeCases(event){
-		if ($('body').hasClass('csstransitions')) {
+		if ($('html').hasClass('csstransitions')) {
 			event.preventDefault();
 			thisLink = $(this);
 			
