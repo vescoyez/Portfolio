@@ -265,7 +265,7 @@ a {
 }
 
 .svg.inlinesvg.csstransitions .case-3-open .button {
-	background-color: #F94B0B;
+	background-color: #262760;
 }
 
 .svg.inlinesvg.csstransitions .case-4-open .button {
@@ -289,7 +289,7 @@ a {
 }
 
 .svg.inlinesvg.csstransitions .case-3-open {
-	background-color: #F94B0B;
+	background-color: #262760;
 }
 
 .svg.inlinesvg.csstransitions .case-4-open {
@@ -325,7 +325,7 @@ a {
 }
 
 .svg.inlinesvg.csstransitions .case-3-open .text-color {
-	color: #F94B0B;
+	color: #262760;
 }
 
 .svg.inlinesvg.csstransitions .case-4-open .text-color {
@@ -1550,13 +1550,83 @@ article .case-slider h1 {
 	header {
 		position: static;
 		margin-bottom: 20px;
-		height: 42px;
+		overflow: hidden;
+	}
+	
+	header .wrapper {
+		padding: 0;
+	}
+	
+	header h1 {
+		margin-left: 10px;
+	}
+	
+	.svg.inlinesvg header h1 a.logo-svg {
+		margin-bottom: 6px;
+		margin-top: 6px;
+	}
+	
+	#logo {
+		height: 36px;
+		width: 54px;
+	}
+	
+	header h1 a {
+		line-height: 24px;
+	}
+	
+	.mobile-menu {
+		height: 60px;
+		margin-right: 10px;
+	}
+	
+	.mobile-nav {
+		width: 55px;
+		height: 60px;
+		background-image: url(/images/mobile-nav.png);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-color: rgba(0,0,0,0.5);
+		margin-left: 10px;
+		opacity: 0.8;
+		cursor: pointer;
+	}
+	
+	.svg .mobile-nav {
+		background-image: url(/images/mobile-nav.svg);
+	}
+	
+	.mobile-nav:hover {
+		opacity: 1;;
+	}
+	
+	.mobile-share {
+		width: 55px;
+		height: 60px;
+		background-image: url(/images/share.png);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-color: rgba(0,0,0,0.5);
+		opacity: 0.8;
+		cursor: pointer;
+	}
+	
+	.svg .mobile-share {
+		background-image: url(/images/share.svg);
+	}
+	
+	.mobile-share:hover {
+		opacity: 1;;
 	}
 	
 	.share {
 		position: static;
 		padding: 0;
 		width: 100%;
+		background: none;
+	}
+	
+	.svg .share {
 		background: none;
 	}
 	
@@ -1612,6 +1682,13 @@ article .case-slider h1 {
 		padding: 0;
 	}
 	
+	.menu ul li a {
+		padding: 0 10px;
+		background: rgba(0, 0, 0, 0.4);
+		margin-top: 1px;
+		display: block;
+	}
+	
 	.header-wrapper {
 		margin: 0;
 	}
@@ -1626,7 +1703,7 @@ article .case-slider h1 {
 	}
 	
 	.wrapper {
-		max-width: 640px;
+		max-width: none;
 		padding: 0 10px;
 	}
 	

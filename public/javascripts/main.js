@@ -64,6 +64,23 @@ $(document).ready(function() {
 		caseClass += 'case-' + $(this).data('case') + '-open ';
 	});
 	
+	$('.mobile-nav').on('click', function() {
+		$('.menu').slideToggle();
+		$('.share').slideUp();
+	});
+	
+	$('.mobile-share').on('click', function() {
+		$('.share').slideToggle();
+		$('.menu').slideUp();
+	});
+	
+	$(window).on("load resize",function(){
+		if ($(".mobile-menu").is(":hidden")) {
+			$('.menu').css({'display': ''})
+			$('.share').css({'display': ''})
+		}
+	});
+	
 	function openCases(){
 		
 		thisCase = $(this).closest('.case-block');
