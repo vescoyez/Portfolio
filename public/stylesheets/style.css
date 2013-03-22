@@ -156,6 +156,9 @@ a {
   color: #8C15CF;
   text-decoration: none;
 }
+a.page-link {
+  color: #FFF;
+}
 .mobile-only {
   display: none;
 }
@@ -237,7 +240,13 @@ a {
   transition: all 0.4s ease-in-out;
   opacity: 1;
 }
-.text-color.active-page {
+.home header .home-link.text-color {
+  color: #BBB;
+}
+.work header .work-link.text-color {
+  color: #BBB;
+}
+.contact header .contact-link.text-color {
   color: #BBB;
 }
 .svg.inlinesvg.csstransitions .case-0-open .text-color {
@@ -263,9 +272,6 @@ a {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-}
-.svg.inlinesvg.csstransitions .case-open .text-color.active-page {
-  color: #BBB;
 }
 .svg.inlinesvg.csstransitions .case-open .content a.text-color:hover {
   opacity: 0.6;

@@ -57,6 +57,7 @@ $(document).ready(function() {
 	
 	$('.case-block').on('click', '.thumb', openCases);
 	$('nav').find('a').on('click', closeCases);
+	$(".page-link").on('click', closeCases);
 	
 	var thisCase, thisLink, numCase, caseOpened, caseClass = '';
 	
@@ -128,24 +129,24 @@ $(document).ready(function() {
 	}
 	
 	function closeCases(event){
-		event.preventDefault();
-		thisLink = $(this);
-		
-		if($('body').hasClass('case-open')) {
-			$('.case-block').filter('.active-case').addClass('closing-case');
-			setTimeout(function() {
-				$('.case-block').removeClass('active-case closing-case');
-				setTimeout(changePage(), 50);
-			}, 400) //Time to close the active case
-		} else {
-			changePage();
+		if ($('body').hasClass('csstransitions')) {
+			event.preventDefault();
+			thisLink = $(this);
+			
+			if($('body').hasClass('case-open')) {
+				$('.case-block').filter('.active-case').addClass('closing-case');
+				setTimeout(function() {
+					$('.case-block').removeClass('active-case closing-case');
+					setTimeout(changePage(), 50);
+				}, 400) //Time to close the active case
+			} else {
+				changePage();
+			}
 		}
 	}
 	
 	function changePage() {
-		$('nav').find('a').removeClass('active-page');
 		$('body').removeClass();
-		thisLink.addClass('active-page');
 		thisLink.filter('.work-link').closest('body').addClass('work');
 		thisLink.filter('.home-link').closest('body').addClass('home');
 		thisLink.filter('.contact-link').closest('body').addClass('contact');
