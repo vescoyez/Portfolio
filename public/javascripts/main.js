@@ -1,39 +1,43 @@
 $(document).ready(function() {
-
-	$('.case-slider').flexslider({
-		namespace: "case-",
-		selector: ".slides > .case-slide",
-		animation: "slide",
-		easing: "swing",
-		direction: "horizontal",
-		reverse: false,
-		animationLoop: false,
-		smoothHeight: false,
-		startAt: 0,
-		slideshow: false,
-		slideshowSpeed: 7000,
-		animationSpeed: 600,
-		initDelay: 0,
-		randomize: false,
-		controlNav: false,
-		directionNav: true,
-		prevText: "Previous",
-		nextText: "Next",
-		start: function(){},
-		before: function(slider){
-			var slide;
-			if(slider.currentSlide < slider.animatingTo){
-				$('.case-slide').removeClass('prev next');
-				slide = '.slide-' + slider.animatingTo;
-				$(slide).addClass('next');
-			} else {
-				$('.case-slide').removeClass('prev next');
-				slide = '.slide-' + slider.animatingTo;
-				$(slide).addClass('prev');
-			}
-		},
-		after: function(){},
-		end: function(){}
+	
+	$(window).on("load resize",function(){
+	
+		$('.case-slider').flexslider({
+			namespace: "case-",
+			selector: ".slides > .case-slide",
+			animation: "slide",
+			easing: "swing",
+			direction: "horizontal",
+			reverse: false,
+			animationLoop: false,
+			smoothHeight: false,
+			startAt: 0,
+			slideshow: false,
+			slideshowSpeed: 7000,
+			animationSpeed: 600,
+			initDelay: 0,
+			randomize: false,
+			controlNav: false,
+			directionNav: true,
+			prevText: "Previous",
+			nextText: "Next",
+			start: function(){},
+			before: function(slider){
+				var slide;
+				if(slider.currentSlide < slider.animatingTo){
+					$('.case-slide').removeClass('prev next');
+					slide = '.slide-' + slider.animatingTo;
+					$(slide).addClass('next');
+				} else {
+					$('.case-slide').removeClass('prev next');
+					slide = '.slide-' + slider.animatingTo;
+					$(slide).addClass('prev');
+				}
+			},
+			after: function(){},
+			end: function(){}
+		});
+	
 	});
 	
 	$('.like-slider').flexslider({
