@@ -646,10 +646,39 @@ article .case-slider h1 {
   padding: 6px 0 10px;
 }
 .submit {
-  background: #5B0B91;
+  background: #361D65;
 }
 .submit:hover {
-  background: #430F66;
+  background: #432880;
+}
+.social {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+.social li {
+  float: left;
+  max-width: 25%;
+}
+.social li a {
+  display: block;
+  margin-right: 20px;
+  opacity: .7;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+.social li a:hover {
+  opacity: 1;
+}
+.social li a img {
+  width: 100%;
+  height: auto;
+  max-width: 64px;
+  max-height: none;
 }
 /*-------------------------------------------------
 	Work Page
