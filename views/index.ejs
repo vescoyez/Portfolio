@@ -21,7 +21,7 @@
 		<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
 		
 		<meta property="og:title" content="Valentin Escoyez's Portfolio">
-		<meta property="og:description" content="Valentin is a web designer and front-end developer. You can see here his projects and abilities">
+		<meta property="og:description" content="Valentin is a web designer and front-end developer. You can see here his projects and abilities.">
 		<meta property="og:url" content="http://valentin.escoyez.be">
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="Valentin Escoyez's Portfolio">
@@ -675,7 +675,7 @@
 								<div class="about-content">
 									<h1>About</h1>
 									
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+									<p>Young and passioned Web designer, I like to create beautiful, clean and user friendly websites!</p>
 								</div>
 							</div>
 						
@@ -689,13 +689,14 @@
 									<p class="contact-approved"><%= errorMessage %></p>
 									<% } %>
 									<form method="post" action="/contact">
-										<label class="contact-label" for="contact-name">Your name</label>
+										<label class="contact-label" for="contact-name">Your name*</label>
 									    <input id="contact-name" class="all contact-form" type="text" name="user[name]">
-									    <label class="contact-label" for="contact-email">Your email</label>
+									    <label class="contact-label" for="contact-email">Your email*</label>
 									    <input id="contact-email" class="all contact-form" type="text" name="user[email]">
-									    <label class="contact-label" for="contact-message">Your message</label>
+									    <label class="contact-label" for="contact-message">Your message*</label>
 									    <textarea id="contact-message" class="all contact-form" rows="5" name="user[message]"></textarea>
-									    <input class="all contact-form" type="submit" value="Submit">
+									    <p class="annotation contact-label">*required</p>
+									    <input class="all contact-form submit" type="submit" value="Submit">
 									</form>
 								</div>
 							</div>
