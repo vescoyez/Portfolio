@@ -82,8 +82,8 @@ $(document).ready(function() {
 		}
 	});
 	
-	function openCases(){
-		
+	function openCases(event){
+		event.preventDefault();
 		thisCase = $(this).closest('.case-block');
 		numCase = +thisCase.data('case');
 		caseOpened = 'case-' + numCase + '-open';
