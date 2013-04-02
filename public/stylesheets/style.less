@@ -526,17 +526,17 @@ header h1 a.logo-svg {
 
 .share {
 	position: absolute;
-	left: -150px;
+	left: 0;
 	top: 92px;
 	background-color: #000;
 	background: url(/images/share.png) no-repeat right center rgba(0,0,0,0.5);
-	margin: 0;
+	margin: 0 0 0 -150px;
 	padding: 10px 35px 10px 10px;
-	-webkit-transition: left .2s ease-in-out;
-	-moz-transition: left .2s ease-in-out;
-	-ms-transition: left .2s ease-in-out;
-	-o-transition: left .2s ease-in-out;
-	transition: left .2s ease-in-out;
+	-webkit-transition: margin .2s ease-in-out;
+	-moz-transition: margin .2s ease-in-out;
+	-ms-transition: margin .2s ease-in-out;
+	-o-transition: margin .2s ease-in-out;
+	transition: margin .2s ease-in-out;
 	z-index: 100;
 }
 
@@ -545,7 +545,7 @@ header h1 a.logo-svg {
 }
 
 .share:hover {
-	left: 0px;
+	margin: 0;
 }
 
 .share ul {
@@ -1677,6 +1677,7 @@ article .case-slider h1 {
 	.share {
 		position: static;
 		padding: 0;
+		margin: 0;
 		width: 100%;
 		background: none;
 	}
