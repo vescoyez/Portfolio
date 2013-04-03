@@ -122,11 +122,6 @@ $(document).ready(function() {
 	if( ((BrowserDetect.browser == "Firefox") && (BrowserDetect.version < "4")) || ((BrowserDetect.browser == "Chrome") && (BrowserDetect.version < "16")) || ((BrowserDetect.browser == "Explorer") && (BrowserDetect.version < "10")) || ((BrowserDetect.browser == "Safari") && (BrowserDetect.version < "6")) || (BrowserDetect.browser == "Safari") ){
 		$('html').removeClass('csstransitions').addClass('no-csstransitions');
 	}
-	var ua = navigator.userAgent.toLowerCase();
-	var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-	if(isAndroid) {
-		$('html').removeClass('csstransitions').addClass('no-csstransitions');
-	}
 	
 	$('.case-slider').flexslider({
 		namespace: "case-",
