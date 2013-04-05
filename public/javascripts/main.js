@@ -119,7 +119,7 @@ $(document).ready(function() {
 	};
 	BrowserDetect.init();
 	
-	if( ((BrowserDetect.browser == "Firefox") && (BrowserDetect.version < "4")) || ((BrowserDetect.browser == "Chrome") && (BrowserDetect.version < "16")) || ((BrowserDetect.browser == "Explorer") && (BrowserDetect.version < "10")) || ((BrowserDetect.browser == "Safari") && (BrowserDetect.version < "6")) || (BrowserDetect.browser == "Safari") ){
+	if( ((BrowserDetect.browser == "Firefox") && (BrowserDetect.version < "4")) || ((BrowserDetect.browser == "Chrome") && (BrowserDetect.version < "16")) || ((BrowserDetect.browser == "Explorer") && (BrowserDetect.version < "10")) || ((BrowserDetect.browser == "Safari") && (BrowserDetect.version < "6")) ){
 		$('html').removeClass('csstransitions').addClass('no-csstransitions');
 	}
 	
